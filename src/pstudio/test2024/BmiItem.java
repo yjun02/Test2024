@@ -23,7 +23,7 @@ public class BmiItem {
 
     public void resetLevel(){
         if (bmi<18.5) this.level = "Underweight";
-        else if (bmi < 25) this.level = "Healty Weight";
+        else if (bmi < 25) this.level = "Healthy Weight";
         else if (bmi < 30) this.level = "Overweight";
         else this.level = "Obesity";
     }
