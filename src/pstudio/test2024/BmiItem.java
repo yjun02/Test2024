@@ -12,21 +12,32 @@ public class BmiItem {
     private String level;
     private Date reg_date;
 
-    public BmiItem(String name, int height, int weight){
+    public BmiItem(String name, int height, int weight) {
         this.name = name;
         this.height = height;
         this.weight = weight;
-        this.bmi = weight / (height*0.01*height*0.01);
+        this.bmi = calculateBmi(height, weight);
         resetLevel();
         this.reg_date = new Date();
     }
 
-    public void resetLevel(){
-        if (bmi<18.5) this.level = "Underweight";
-        else if (bmi < 25) this.level = "Healthy Weight";
-        else if (bmi < 30) this.level = "Overweight";
-        else this.level = "Obesity";
+    private double calculateBmi(int height, int weight) { // BMI를 계산하는 함수를 추가했습니다!
+        if (height == 0)
+            return 0;
+        return weight / (height * 0.01 * height * 0.01);
     }
+
+    public void resetLevel() {
+        if (bmi < 18.5)
+            this.level = "Underweight";
+        else if (bmi < 25)
+            this.level = "Healthy Weight";
+        else if (bmi < 30)
+            this.level = "Overweight";
+        else
+            this.level = "Obesity";
+    }
+
     public String getName() {
         return name;
     }
@@ -77,7 +88,8 @@ public class BmiItem {
 
     @Override
     public String toString() {
-        return String.format("%-15s", name) + " [h:" + height + ", w:" + weight + "] " + String.format("%.1f", bmi) + " - " + level + " - "
+        return String.format("%-15s", name) + " [h:" + height + ", w:" + weight + "] " + String.format("%.1f", bmi)
+                + " - " + level + " - "
                 + new SimpleDateFormat("HH:mm:ss").format(reg_date);
     }
 }

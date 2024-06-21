@@ -1,7 +1,12 @@
-Kenny Gee/170/95
-Jay Lee/190/65
 Clara Park/165/46
-Matthew Choi/175/76
-Mary Yoo/160/54
-Wayne Wang/154/51
+HG Lee/173/70
+JH Park/172/72
+Jay Lee/190/65
 John Doe/178/99
+Kenny Gee/170/95
+Mary Yoo/160/54
+Matthew Choi/175/76
+SH Lee/175/80
+SY Kim/169/65
+Wayne Wang/154/51
+YJ Jung/168/73
